@@ -40,6 +40,12 @@ def main():
         default=None,
         help='Output audio file path (default: audio_000.wav in current directory)',
     )
+    parser.add_argument(
+        "--speed",
+        type=float,
+        default=None,
+        help='Speech speed multiplier (default: 1.0)',
+    )
 
     args = parser.parse_args()
 
@@ -50,6 +56,7 @@ def main():
         ref_text=args.ref_text,
         lang_code=args.lang_code,
         output_path=args.output,
+        speed=args.speed,
     )
 
 

@@ -14,6 +14,7 @@ def generate_tts(
     ref_text: Optional[str] = None,
     lang_code: Optional[str] = None,
     output_path: Optional[str] = None,
+    speed: Optional[float] = None,
 ) -> str:
     """
     Generate TTS audio
@@ -25,6 +26,7 @@ def generate_tts(
         ref_text: Reference text, defaults to TTSConfig.ref_text
         lang_code: Language code, defaults to TTSConfig.lang_code
         output_path: Output audio file path, defaults to current directory
+        speed: Speech speed multiplier, defaults to TTSConfig.speed (1.0)
 
     Returns:
         Path to the generated audio file
@@ -37,6 +39,7 @@ def generate_tts(
     ref_text = ref_text or config.ref_text
     lang_code = lang_code or config.lang_code
     output_path = output_path or config.output_path
+    speed = speed if speed is not None else config.speed
 
     loaded_model = load_model(model)
 
@@ -71,6 +74,7 @@ def generate_tts(
             ref_text=ref_text,
             lang_code=lang_code,
             file_prefix=file_prefix,
+            speed=speed,
         )
         
         # Rename file to remove _000 suffix

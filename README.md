@@ -74,7 +74,7 @@ generate_tts(
 
 ```python
 from qwen3_tts_mlx import generate_tts
-
+```python
 # Full parameter customization
 generate_tts(
     model="mlx-community/Qwen3-TTS-12Hz-1.7B-Base-5bit",
@@ -82,6 +82,24 @@ generate_tts(
     ref_audio="tests/Kai.wav",
     ref_text="Reference text for the audio",
     lang_code="en",
+)
+```
+
+#### Adjust Speech Speed
+
+```python
+from qwen3_tts_mlx import generate_tts
+
+# Speed up speech (1.5x faster)
+generate_tts(
+    text="Hello World",
+    speed=1.5
+)
+
+# Slow down speech (0.8x slower)
+generate_tts(
+    text="Hello World",
+    speed=0.8
 )
 ```
 
@@ -127,6 +145,9 @@ qwen3-tts-mlx --model "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-5bit" --text "Hell
 
 # Save to custom output path
 qwen3-tts-mlx --text "Hello World" --output "output/my_audio.wav"
+
+# Adjust speech speed
+qwen3-tts-mlx --text "Hello World" --speed 1.5
 ```
 
 #### View All Options
@@ -139,6 +160,7 @@ Output:
 ```
 usage: qwen3-tts-mlx [-h] [--model MODEL] [--text TEXT] [--ref-audio REF_AUDIO]
                      [--ref-text REF_TEXT] [--lang-code LANG_CODE] [--output OUTPUT]
+                     [--speed SPEED]
 
 Qwen3 TTS MLX Command Line Tool
 
@@ -152,6 +174,7 @@ options:
   --lang-code LANG_CODE
                         Language code (default: z)
   --output OUTPUT       Output audio file path (default: audio_000.wav in current directory)
+  --speed SPEED         Speech speed multiplier (default: 1.0)
 ```
 
 ## Configuration Parameters
@@ -164,6 +187,7 @@ options:
 | `ref_text` | `None` | Reference text corresponding to the reference audio |
 | `lang_code` | `z` | Language code (e.g., 'en', 'zh', 'z') |
 | `output_path` | `None` | Output audio file path (default: `audio_000.wav` in current directory) |
+| `speed` | `1.0` | Speech speed multiplier (e.g., 0.5 for half speed, 2.0 for double speed) |
 
 ### Language Codes
 

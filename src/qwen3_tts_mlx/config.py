@@ -16,3 +16,4 @@ class TTSConfig:
     ref_text: Optional[str] = "最近听到的一首歌，这种雷鬼风格，它就真的带给人非常欢快的感觉。"
     lang_code: str = "z"
     output_path: Optional[str] = None
+    speed: float = 1.0
