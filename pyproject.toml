@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "qwen3-tts-mlx"
 version = "0.1.0"
-description = "A simple TTS package based on Qwen3-TTS-MLX"
+description = "A simple and easy-to-use wrapper package for Qwen3 TTS based on MLX Audio"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "Apache-2.0"}

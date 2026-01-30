@@ -13,7 +13,7 @@ A simple and easy-to-use wrapper package for Qwen3 TTS based on MLX Audio. This 
 
 - Python 3.9 or higher
 - macOS with Apple Silicon (M1/M2/M3)
-- [mlx-audio](https://github.com/ml-explore/mlx-audio) dependency
+- [mlx-audio](https://github.com/Blaizzy/mlx-audio) dependency
 
 ## Installation
 
@@ -255,7 +255,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Acknowledgments
 
-- [MLX Audio](https://github.com/ml-explore/mlx-audio) - The underlying TTS framework
+- [MLX Audio](https://github.com/Blaizzy/mlx-audio) - The underlying TTS framework
 - [Qwen3 TTS](https://huggingface.co/mlx-community/Qwen3-TTS-12Hz-1.7B-Base-5bit) - The TTS model by MLX Community
 - [Apple MLX](https://github.com/ml-explore/mlx) - Machine learning framework for Apple Silicon
 
