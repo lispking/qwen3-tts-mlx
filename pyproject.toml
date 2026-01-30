@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qwen3-tts-mlx"
+version = "0.1.0"
+description = "A simple TTS package based on Qwen3-TTS-MLX"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "lispking"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache-2.0 License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "mlx-audio",
+    "mlx-lm",
+    "transformers==5.0.0rc3",
+    "torch",
+    "numpy<2.0",
+    "pandas<3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.scripts]
+qwen3-tts-mlx = "qwen3_tts_mlx.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/lispking/qwen3-tts-mlx"
+
+[tool.setuptools.packages.find]
+where = ["src"]
